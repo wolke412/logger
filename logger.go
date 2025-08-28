@@ -140,11 +140,11 @@ func (m *MultiHandler) WithGroup(name string) slog.Handler {
 
 var LOGS_FOLDER string = "logs"
 
-func Init( path *string ) {
-	
-	if path != nil {
-		LOGS_FOLDER = *path
-	}
+func SetPath(path string)  {
+	LOGS_FOLDER = path
+}
+
+func Init() {
 
 	// creates today
 	createLogPath()
