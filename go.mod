@@ -1,4 +1,4 @@
-module logger
+module github.com/wolke412/logger
 
 go 1.23.4
 
