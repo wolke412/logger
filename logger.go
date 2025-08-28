@@ -13,6 +13,8 @@ import (
 	"github.com/wolke412/paint"
 )
 
+// Hm
+
 type Current struct {
 	file *os.File
 }
