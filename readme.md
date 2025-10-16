@@ -27,19 +27,19 @@ import (
 func main() {
 
 	// sets saves directory
-	logger.SetPaht("logs")
+	logger.SetPath("logs")
 
 	// Initialize the logger
-	go logget.Init()
+	go logger.Init()
 
 
 	// Any logs ran in your app with log or slog 
 	// will be printedd into your terminal and into
 	// the file;
 
-	// The library will crrate a new file every day at local 00:00
+	// The library will create a new file every day at local 00:00
 
-	// Entries in the terminal are colores;
+	// Entries in the terminal are colored;
 	// Entries in files are raw
 
 	// ...
