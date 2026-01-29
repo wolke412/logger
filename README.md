@@ -12,7 +12,7 @@
 
 #### Installation
 ```bash
- > go get github.com/wolke412/logger
+ go get github.com/wolke412/logger
 ```
 
 #### Usage
