@@ -3,6 +3,7 @@ package logger
 import (
 	"context"
 	"fmt"
+	"github.com/wolke412/paint"
 	"io"
 	"log"
 	"log/slog"
@@ -10,7 +11,6 @@ import (
 	"path/filepath"
 	"regexp"
 	"time"
-	"github.com/wolke412/paint"
 )
 
 // Hm
@@ -142,7 +142,7 @@ func (m *MultiHandler) WithGroup(name string) slog.Handler {
 
 var LOGS_FOLDER string = "logs"
 
-func SetPath(path string)  {
+func SetPath(path string) {
 	LOGS_FOLDER = path
 }
 
@@ -151,12 +151,10 @@ func Init() {
 	// creates today
 	createLogPath()
 
+	// Locks
 	createLogPathDaily()
 
 	defer current.file.Close()
-
-	// locks forever
-	select {}
 }
 
 func setLoggerCallbacks() {
